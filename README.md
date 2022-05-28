@@ -2,6 +2,7 @@
 
 [![Python Version](https://img.shields.io/badge/python-3.6-brightgreen.svg)](https://python.org)
 [![Django Version](https://img.shields.io/badge/django-3.0-brightgreen.svg)](https://djangoproject.com)
+[![CircleCI](https://circleci.com/gh/suhailvs/django-schools.svg?style=svg)](https://circleci.com/gh/suhailvs/django-schools)
 
 ## [demo](https://django.stackschools.com/)
 
@@ -55,11 +56,20 @@ The project will be available at http://127.0.0.1:8000, Login using::
 
 ```
 $ vim /etc/apache2/sites-available/djangoschools.conf
+
 <VirtualHost *:80>
     ServerName django.stackschools.com
+
     WSGIDaemonProcess djangoschoolapp python-home=/var/www/django-schools/django_school/env python-path=/var/www/django-schools/django_school
     WSGIProcessGroup djangoschoolapp
     WSGIScriptAlias / /var/www/django-schools/django_school/django_school/wsgi.py
     ErrorLog /var/www/django-schools/error.log
     CustomLog /var/www/django-schools/access.log combined
 </VirtualHost>
+```
+
+## License
+
+The source code is released under the [MIT License](https://github.com/sibtc/django-multiple-user-types-example/blob/master/LICENSE).
+
+
